@@ -1,0 +1,34 @@
+User-Agent: *
+Disallow: /project/
+Disallow: /project.html
+Disallow: /resume/
+Disallow: /resume.html
+Disallow: /contact/
+Disallow: /contact.html
+Disallow: /submitted/
+Disallow: /submitted.html
+Disallow: /*.pdf
+Disallow: /*.jpg
+Disallow: /*.jpeg
+Disallow: /*.png
+Disallow: /*.gif
+Disallow: /*.svg
+Disallow: /*.mp4
+Disallow: /*.avi
+Disallow: /*.mov
+Disallow: /*.wmv
+Disallow: /*.txt
+Disallow: /*.doc
+Disallow: /*.docx
+Disallow: /*.ppt
+Disallow: /*.pptx
+Disallow: /*.xls
+Disallow: /*.xlsx
+
+User-Agent: Googlebot-Image
+Disallow: /
+
+User-Agent: Googlebot-Video
+Disallow: /
+
+Sitemap: https://arirab.github.io/sitemap.xml

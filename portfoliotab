@@ -1,0 +1,11 @@
+
+					<li class='nav-item dropdown ms-3'>
+						<a class='nav-link dropdown-toggle nav-link-uline fs-6 text-color-bold' href='#' role='button'
+							data-bs-toggle='dropdown' aria-expanded='false'>
+							Portfolio
+						</a>
+						<div id='portfolioDropdown' class='dropdown-menu p-0 bg-color'
+							aria-labelledby='portfolioDropdown'>
+							<a class='dropdown-item text-color custom-dropdown-item' href='resume'>Resume</a>
+						</div>
+					</li>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name='description' content='A portfolio of Simeon.'>
+	<meta name='author' content='Ariful Rabbani'>
+	<title>Simeon · Wuthier</title>
+	<link rel='icon' href='favicon.svg'>
+	<link href='lib/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='style.min.css' type='text/css' rel='stylesheet'>
+</head>
+
+<body class='bg-color'>
+	<header class='container-main navbar navbar-expand-md navbar-light bg-color sticky-top border-bottom-dim'>
+		<div class='container'>
+			<a class='navbar-brand text-center fs-5 col-md-2 border-0 bg-transparent text-color-bold'>Ariful Rabbani</a>
+			<button class='navbar-toggler text-color' type='button' data-bs-toggle='collapse'
+				data-bs-target='#navbarContent' aria-controls='navbarContent' aria-expanded='false'
+				aria-label='Toggle navigation'>
+				<span class='navbar-toggler-icon' data-feather='menu'></span>
+			</button>
+			<div class='collapse navbar-collapse' id='navbarContent'>
+				<ul class='navbar-nav me-auto'>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold'
+							href='/'><b>Home</b></a>
+					</li>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold'
+							href='projects'>Projects</a></li>
+					<li class='nav-item dropdown ms-3'>
+						<a class='nav-link dropdown-toggle nav-link-uline fs-6 text-color-bold' href='#' role='button'
+							data-bs-toggle='dropdown' aria-expanded='false'>
+							Portfolio
+						</a>
+						<div id='portfolioDropdown' class='dropdown-menu p-0 bg-color'
+							aria-labelledby='portfolioDropdown'>
+							<a class='dropdown-item text-color custom-dropdown-item' href='resume'>Resume</a>
+						</div>
+					</li>
+					<li class='nav-item ms-3'>
+						<a class='nav-link nav-link-uline fs-6 text-color-bold' id='contactNav'
+							href='contact'>Contact</a>
+					</li>
+				</ul>
+				<div class='form-check form-switch float-end'>
+					<label class='form-check-label text-color' for='nightModeToggle'>
+						<i id='dayNightIcon' data-feather='sun'></i>
+					</label>
+					<input class='form-check-input' type='checkbox' id='nightModeToggle'
+						onchange='toggleDayNightIcon()'>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class='container-main d-flex flex-wrap bg-color fade'>
+		<nav class='navbar col-md-3 col-lg-3 d-md-block bg-color sidebar'>
+			<div class='position-sticky pt-3 sidebar-sticky'>
+				<ul class='nav flex-column'>
+					<li class='nav-item'>
+						<canvas id='profile' class='fade' width='600' height='827'></canvas>
+					</li>
+					<li class='nav-link nav-item mt-3'><span
+							class='active fs-5 font-weight-bold text-color-bold'><b>Ariful Rabbani</b></span>
+					</li>
+					<li class='nav-item'><span class='nav-link active fs-6 text-color'>Ph.D. Candidate in
+							Security</span><span class='nav-link fs-6 text-color-dim'
+							style='padding-top: 0; margin-top: -5px;'>Department of Computer Science, University of
+							Colorado, Colorado Springs</span></li>
+					<li class='nav-item'><a class='nav-link fs-6 text-color' href='mailto:swuthier@uccs.edu'
+							target='_blank' rel='noopener noreferrer'><span data-feather='mail'
+								class='align-text-bottom text-color-dim'></span>
+							Email</a></li>
+					<li class='nav-item'><a class='nav-link fs-6 text-color'
+							href='https://scholar.google.com/citations?user=m-3zvdEAAAAJ' target='_blank'
+							rel='noopener noreferrer'><span data-feather='book'
+								class='align-text-bottom text-color-dim'></span> Google Scholar</a>
+					</li>
+					<li class='nav-item'><a class='nav-link fs-6 text-color' href='https://github.com/arirab'
+							target='_blank' rel='noopener noreferrer'><span data-feather='github'
+								class='align-text-bottom text-color-dim'></span>
+							GitHub</a></li>
+					<li class='nav-item'><a class='nav-link fs-6 text-color' href='https://www.linkedin.com/in/arirab'
+							target='_blank' rel='noopener noreferrer'><span data-feather='linkedin'
+								class='align-text-bottom text-color-dim'></span> LinkedIn</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main class='col-md-9 ms-sm-auto col-lg-9 p-3 px-md-4 bg-color'>
+			<h4 class='text-color'>Objective</h4>
+			<p class='text-color'>
+				Work on cutting-edge technologies; discover creative and robust solutions that guarantee scalability and
+				security.
+			</p>
+			<hr class='text-color'>
+			<p class='fs-6 text-color'>
+				I am a Ph.D. candidate in the Department of Computer Science at the University of Colorado, Colorado
+				Springs. I am currently affiliated with the Networking Systems Security Lab, pursuing research under the
+				guidance of <a href='https://academics.uccs.edu/~schang2' target='_blank' rel='noopener noreferrer'
+					class='blind'>Prof. Sang-Yoon Chang</a>. My primary areas of research encompasses
+				cryptographic applications, networking security, and distributed ledger technologies. Before starting my
+				doctoral studies, I earned my B.S. degree in Computer Science in 2020 from the same institution.
+			</p>
+
+			<h4 class='text-color'>Research Focus</h4>
+			<p class='text-color'>
+				My research intersects cybersecurity, cryptography, and innovative network architectures. I have a
+				strong interest in blockchain and distributed mobile networking. Ensuring confidentiality, integrity,
+				and availability in these systems motivates my studies. By blending empirical research, simulation
+				studies, and anomaly detection, I aim to develop frameworks that help in understanding and securing
+				these networks. This page highlights the core of my ongoing work.
+			</p>
+
+			<embed type='image/svg+xml' id='highLevelComponents' src='img/high-level-components-light.svg' width='100%'
+				alt='My Research'></embed>
+			<br>
+			<br>
+			<h4 class='text-color'>Cryptography & Future Internet Architectures</h4>
+			<p class='text-color'>
+				My research focuses on translating theoretical cryptographic concepts into practical solutions, ensuring
+				alignment between theoretical and practical security. As modern systems continue to evolve and with the
+				advent of 5G and the anticipation of 6G, the importance of robust cryptographic protocols and advanced
+				internet architectures becomes increasingly evident. As quantum computing advances, the significance of
+				post-quantum cryptography also grows. My work emphasizes enhancing handshake protocols' security,
+				crafting strategies to protect them from threats, and ensuring secure communications. Simultaneously, I
+				explore modern internet architectures, such as QUIC and DNSSEC.
+			</p>
+
+			<div class='row'>
+				<div class='col-6 image-container'>
+					<embed type='image/svg+xml' id='pqcPlot' src='img/pqc-plot-light.svg' width='100%'
+						alt='Algorithm Comparison'></embed>
+				</div>
+				<div class='col-6 image-container'>
+					<embed type='image/svg+xml' id='quicStack' src='img/quic-stack-light.svg' width='100%'
+						alt='QUIC Network Stack'></embed>
+				</div>
+				<div class='col-6 text-color text-center'>
+					<p>Paper: <a href='https://doi.org/10.1109/ICCCN52240.2021.9522179' target='_blank'
+							rel='noopener noreferrer'>ICCCN 2021</a></p>
+				</div>
+				<div class='col-6 text-color text-center'>
+					<p>Paper: <a href='https://doi.org/10.1109/EuCNC/6GSummit58263.2023.10188358' target='_blank'
+							rel='noopener noreferrer'>EuCNC/6G Summit 2023</a></p>
+				</div>
+			</div>
+
+
+			<br>
+			<h4 class='text-color'>Peer-to-Peer Networks & Distributed Ledger Technologies</h4>
+			<p class='text-color'>
+				Decentralized peer-to-peer networks present both opportunities and challenges, particularly in terms of
+				connectivity and security. I am drawn to the foundational architectures of these networks and have
+				practical interest in distributed ledger technologies like Bitcoin Core, maintained by Chaincode Labs.
+				Here, I seek to learn more about and occasionally contribute to mechanisms that could support data
+				integrity and trust.
+			</p>
+
+			<div class='row'>
+				<div class='col-6 image-container'>
+					<embed type='image/svg+xml' id='blockDelay' src='img/block-delay-light.svg' width='100%'
+						alt='Block Propagation Time'></embed>
+				</div>
+				<div class='col-6 image-container'>
+					<embed type='image/svg+xml' id='bandwidth' src='img/bandwidth-light.svg' width='100%'
+						alt='Node Bandwidth'></embed>
+				</div>
+				<div class='col-12 text-color'>
+					<p>
+						A cumulative distribution function for the block dissemination time in the Bitcoin mainnet when
+						varying the number of peer connections between 1 and 512. The dashed lines denote the averages.
+						On the right we plot the incoming and outgoing bandwidth when varying the number of peer
+						connections.
+					</p>
+				</div>
+			</div>
+
+			<p class='text-color'>
+				More information can be found in my <a href='projects'>projects</a> page.
+			</p>
+
+		</main>
+	</div>
+	<footer class='container-main footer text-color-dim bg-color-dim'>
+		<div class='row'>
+			<div class='col text-center'>
+				Copyright © 2023 Ariful Rabbani.
+			</div>
+		</div>
+	</footer>
+	<script src='lib/js/bootstrap.bundle.min.js' defer></script>
+	<script src='lib/js/feather.min.js'></script>
+	<script type='text/javascript' src='script.min.js'></script>
+	<script type='text/javascript'>
+		// Draw the profile image on the canvas if supported, otherwise insert the image element
+		window.onload = function () {
+			let canvas = document.getElementById('profile');
+			if (canvas.getContext) {
+				var ctx = canvas.getContext('2d');
+				var img = new Image();
+				img.onload = function () {
+					ctx.drawImage(img, 0, 0, 600, 827);
+					canvas.classList.add('show');
+				}
+				img.src = 'img/profile.jpg';
+			} else {
+				// Canvas is not supported, insert the image
+				var imgElement = document.createElement('img');
+				imgElement.id = 'profileImgFallback';
+				imgElement.src = 'img/profile.jpg';
+				imgElement.alt = 'Profile image of Ariful Rabbani';
+				imgElement.classList.add('fade');
+				canvas.parentNode.replaceChild(imgElement, canvas);
+				imgElement.onload = function () {
+					imgElement.classList.add('show');
+				}
+			}
+		};
+	</script>
+</body>
+
+</html>

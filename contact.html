@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name='description' content='Contact'>
+	<meta name='author' content='Ariful Rabbani'>
+	<title>Contact · Simeon</title>
+	<link rel='icon' href='favicon.svg'>
+	<link href='lib/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='style.min.css' type='text/css' rel='stylesheet'>
+</head>
+
+<body class='bg-color'>
+	<header class='container-main navbar navbar-expand-md navbar-light bg-color sticky-top border-bottom-dim'>
+		<div class='container'>
+			<a class='navbar-brand text-center fs-5 col-md-2 border-0 bg-transparent text-color-bold'>Ariful Rabbani</a>
+			<button class='navbar-toggler text-color' type='button' data-bs-toggle='collapse'
+				data-bs-target='#navbarContent' aria-controls='navbarContent' aria-expanded='false'
+				aria-label='Toggle navigation'>
+				<span class='navbar-toggler-icon' data-feather='menu'></span>
+			</button>
+			<div class='collapse navbar-collapse' id='navbarContent'>
+				<ul class='navbar-nav me-auto'>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold' href='/'>Home</a>
+					</li>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold'
+							href='projects'>Projects</a></li>
+					<li class='nav-item dropdown ms-3'>
+						<a class='nav-link dropdown-toggle nav-link-uline fs-6 text-color-bold' href='#' role='button'
+							data-bs-toggle='dropdown' aria-expanded='false'>
+							Portfolio
+						</a>
+						<div id='portfolioDropdown' class='dropdown-menu p-0 bg-color'
+							aria-labelledby='portfolioDropdown'>
+							<a class='dropdown-item text-color custom-dropdown-item' href='resume'>Resume</a>
+						</div>
+					</li>
+					<li class='nav-item ms-3'>
+						<a class='nav-link nav-link-uline fs-6 text-color-bold' id='contactNav'
+							href='contact'><b>Contact</b></a>
+					</li>
+				</ul>
+				<div class='form-check form-switch float-end'>
+					<label class='form-check-label text-color' for='nightModeToggle'>
+						<i id='dayNightIcon' data-feather='sun'></i>
+					</label>
+					<input class='form-check-input' type='checkbox' id='nightModeToggle'
+						onchange='toggleDayNightIcon()'>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id='form-container' class='container-main d-flex flex-wrap bg-color fade'>
+		<main class='col-md-12 ms-sm-auto col-lg-12 px-md-4 bg-color'>
+			<div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3'>
+				<div class='container text-color p-o'>
+					<script type='text/javascript'>
+						var submitted = false;
+					</script>
+					<!-- Hidden iframe for form submission -->
+					<iframe name='hidden_iframe' id='hidden_iframe' style='display:none;'
+						onload='if(submitted) {window.location="submitted.html";}'></iframe>
+					<form id='contact-form'
+						action='https://docs.google.com/forms/d/e/1FAIpQLSfMSezQyjxUFghM6xsoLHSjy2PbtQzi0zCv_HOwnER5W7D8_A/formResponse?embedded=true'
+						method='POST' target='hidden_iframe' onsubmit='saveMessageToStorage(); submitted=true;'>
+						<h4 id='form-header' class='text-color'>Contact Form</h4>
+						<br>
+						<!-- <i data-feather='coffee' class='text-color-dimmer float-end'
+							style='width: 50px; height: 50px; margin-top: -25px; rotate(-90deg);'></i> -->
+						<div class='mb-3'>
+							<label for='email' class='form-label text-color'>Email</label>
+							<input type='email' class='form-control text-color bg-color-dim' id='email'
+								name='entry.851633341' required>
+						</div>
+						<div class='mb-3'>
+							<label for='name' class='form-label text-color'>Name</label>
+							<input type='text' class='form-control text-color bg-color-dim' id='name'
+								name='entry.1644470241' required>
+						</div>
+						<div class='mb-3'>
+							<label for='message' class='form-label text-color'>Your Message</label>
+							<textarea class='form-control text-color bg-color-dim' id='message' rows='4'
+								name='entry.1799038713' required></textarea>
+						</div>
+						<button type='submit' class='btn btn-primary float-end'>Send Message</button>
+					</form>
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer class='container-main footer text-color-dim bg-color-dim'>
+		<div class='row'>
+			<div class='col text-center'>
+				Copyright © 2023 Ariful Rabbani.
+			</div>
+		</div>
+	</footer>
+	<script src='lib/js/bootstrap.bundle.min.js' defer></script>
+	<script src='lib/js/feather.min.js'></script>
+	<script type='text/javascript' src='script.min.js'></script>
+
+	<script type='text/javascript'>
+		// Adjust the iframe height to fit the window
+		function adjustIframeHeight() {
+			const headerHeight = document.querySelector('header').offsetHeight;
+			const footerHeight = document.querySelector('footer').offsetHeight;
+			const iframeHeight = window.innerHeight - headerHeight - footerHeight;
+			document.getElementById('form-container').style.height = iframeHeight + 'px';
+		}
+		window.addEventListener('resize', adjustIframeHeight);
+		window.addEventListener('DOMContentLoaded', adjustIframeHeight);
+
+		// Hide footer on mobile devices when input is focused
+		const footer = document.querySelector('.footer');
+		const inputs = document.querySelectorAll('input, textarea');
+		if (window.innerHeight > window.innerWidth) { // Mobile devices
+			inputs.forEach(input => {
+				input.addEventListener('focus', () => {
+					footer.style.opacity = '0';
+				});
+				input.addEventListener('blur', () => {
+					footer.style.opacity = '1';
+				});
+			});
+		}
+
+		function saveMessageToStorage() {
+			const message = document.getElementById('message').value;
+			const email = document.getElementById('email').value;
+			const name = document.getElementById('name').value;
+			localStorage.setItem('submittedMessage', message);
+			localStorage.setItem('submittedEmail', email);
+			localStorage.setItem('submittedName', name);
+		}
+	</script>
+
+</body>
+
+</html>

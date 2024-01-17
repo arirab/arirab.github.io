@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name='description' content='List of projects'>
+	<meta name='author' content='Ariful Rabbani'>
+	<title>Projects · Simeon</title>
+	<link rel='icon' href='favicon.svg'>
+	<link href='lib/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='style.min.css' type='text/css' rel='stylesheet'>
+	<style>
+		.repo-icon {
+			transform: scale(0.9);
+			margin-right: 20px;
+		}
+
+		.repo-icon-hover:hover {
+			transform: scale(1.2);
+			cursor: pointer;
+			transition: transform 0.3s;
+		}
+
+		.expand-button {
+			background: none;
+			border: none;
+			text-decoration: none;
+			font-size: 18px;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			outline: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.expand-icon {
+			width: 26px;
+			height: 26px;
+			margin-top: -8px;
+			margin-right: 8px;
+			transition: transform 0.3s ease;
+		}
+
+		.icon-flipped {
+			transform: rotate(180deg);
+		}
+
+		.scroll-wrapper {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			width: 100%;
+		}
+
+		.horizontal-scroll-container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.horizontal-scroll-container img {
+			height: 240px;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 5px;
+			transition: border-radius 0.3s ease-in-out;
+			pointer-events: none;
+			user-select: none;
+		}
+
+		.horizontal-scroll-container img:hover {
+			border-radius: 8px;
+		}
+
+		.card {
+			--bs-card-bg: none;
+			border: none;
+		}
+
+		.card-border {
+			border: 1px solid rgba(128, 128, 128, 0.5);
+		}
+	</style>
+</head>
+
+<body class='bg-color'>
+	<header class='container-main navbar navbar-expand-md navbar-light bg-color sticky-top border-bottom-dim'>
+		<div class='container'>
+			<a class='navbar-brand text-center fs-5 col-md-2 border-0 bg-transparent text-color-bold'>Ariful Rabbani</a>
+			<button class='navbar-toggler text-color' type='button' data-bs-toggle='collapse'
+				data-bs-target='#navbarContent' aria-controls='navbarContent' aria-expanded='false'
+				aria-label='Toggle navigation'>
+				<span class='navbar-toggler-icon' data-feather='menu'></span>
+			</button>
+			<div class='collapse navbar-collapse' id='navbarContent'>
+				<ul class='navbar-nav me-auto'>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold' href='/'>Home</a>
+					</li>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold'
+							href='projects'><b>Projects</b></a></li>
+					<li class='nav-item dropdown ms-3'>
+						<a class='nav-link dropdown-toggle nav-link-uline fs-6 text-color-bold' href='#' role='button'
+							data-bs-toggle='dropdown' aria-expanded='false'>
+							Portfolio
+						</a>
+						<div id='portfolioDropdown' class='dropdown-menu p-0 bg-color'
+							aria-labelledby='portfolioDropdown'>
+							<a class='dropdown-item text-color custom-dropdown-item' href='resume'>Resume</a>
+						</div>
+					</li>
+					<li class='nav-item ms-3'>
+						<a class='nav-link nav-link-uline fs-6 text-color-bold' id='contactNav'
+							href='contact'>Contact</a>
+					</li>
+				</ul>
+				<div class='form-check form-switch float-end'>
+					<label class='form-check-label text-color' for='nightModeToggle'>
+						<i id='dayNightIcon' data-feather='sun'></i>
+					</label>
+					<input class='form-check-input' type='checkbox' id='nightModeToggle'
+						onchange='toggleDayNightIcon()'>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class='container-main d-flex flex-wrap bg-color fade'>
+		<main class='col-md-12 ms-sm-auto col-lg-12 px-md-4 bg-color'>
+			<div class='d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3'>
+				<div class='container text-color'>
+					<h4 class='text-color'>Projects</h4>
+					<br>
+
+					<div class='card mb-4 text-color rounded card-border'>
+						<div class='card-header bg-color-dim'>
+							<h5 class='card-title m-0'>Proof-of-Work Network Simulator for Blockchain and Cryptocurrency
+								Research</h5>
+						</div>
+						<div class='card-body rounded-bottom bg-card-color'>
+							<div class='row'>
+								<div class='col-lg-6 mb-3'>
+									<p class='card-text'>
+										<strong>Abstract:</strong> Blockchain and the proof-of-work (PoW) distributed
+										consensus protocol rely on peer-to-peer (P2P) networking. We build a PoW P2P
+										simulator for the modeling and analyses of permissionless blockchain networking.
+										Our simulator utilizes a built-in randomness generator for the simulations, has
+										an easy-to-use interface and intuitive visualization, supports
+										dynamic/programmable control and modifications, and can generate simulation data
+										for further processing. We publish our simulator in open source to facilitate
+										its use for blockchain and P2P networking research and especially recommend it
+										for scalability research or preliminary testing. To highlight its features and
+										capabilities, we demonstrate the simulator use in this paper to analyze the
+										recent blockchain security research, including 51% attack, eclipse,
+										partitioning, and DoS attack.
+									</p>
+									<div class='d-flex gap-2 mt-3'>
+										<a href='https://doi.org/10.1109/ICDCS51616.2021.00110' target='_blank'
+											rel='noopener noreferrer' class='btn btn-primary btn-small'>View
+											Publication</a>
+										<a href='https://arirab.github.io/blockchain-simulator/' target='_blank'
+											rel='noopener noreferrer' class='btn btn-secondary btn-small'>Launch
+											Simulator</a>
+									</div>
+								</div>
+								<div class='col-lg-6'>
+									<div class='row gx-2 gy-2'>
+										<div class='col-6 mb-2'>
+											<a target='_blank'>
+												<img src='img/pow-simulator/1.png' alt='Screenshot 1'
+													class='img-thumbnail bg-color-dim'>
+											</a>
+										</div>
+										<div class='col-6 mb-2'>
+											<a target='_blank'>
+												<img src='img/pow-simulator/2.png' alt='Screenshot 2'
+													class='img-thumbnail bg-color-dim'>
+											</a>
+										</div>
+										<div class='col-6 mb-2'>
+											<a target='_blank'>
+												<img src='img/pow-simulator/3.png' alt='Screenshot 3'
+													class='img-thumbnail bg-color-dim'>
+											</a>
+										</div>
+										<div class='col-6 mb-2'>
+											<a target='_blank'>
+												<img src='img/pow-simulator/4.png' alt='Screenshot 4'
+													class='img-thumbnail bg-color-dim'>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='mt-3'>
+								<p class='mb-0'><strong>Citation:</strong> S. Wuthier and S. -Y. Chang, "Demo:
+									Proof-of-Work Network Simulator for Blockchain and Cryptocurrency Research," 2021
+									IEEE 41st International Conference on Distributed Computing Systems (ICDCS), 2021,
+									pp. 1098-1101, doi: 10.1109/ICDCS51616.2021.00110.
+							</div>
+						</div>
+					</div>
+
+					<div class='modal fade' id='webpageModal' aria-labelledby='webpageModalLabel' aria-hidden='true'>
+						<div class='modal-dialog modal-xl'>
+							<div class='modal-content bg-color-dimmer modal-xl'>
+								<div class='modal-header'>
+									<h5 class='modal-title text-color fs-5 text-bold' id='webpageModalLabel'>
+										Visit the <a href='#' id='webpageModalTitle' target='_blank'
+											rel='noopener noreferrer' class='text-color-dim text-decoration-none'
+											rel='noopener noreferrer' class='text-color'>GitHub</a> app, or its <a
+											href='#' id='webpageModalTitleSourceCode' target='_blank'
+											rel='noopener noreferrer' class='text-color-dim text-decoration-none'
+											rel='noopener noreferrer' class='text-color'>source code</a>.
+									</h5>
+									<button type='button' class='btn-close bg-color-inv' data-bs-dismiss='modal'
+										aria-label='Close'></button>
+								</div>
+								<div class='modal-body p-2'>
+									<div id='webpageModalDescriptionWrapper' class='text-center'>
+										<p id='webpageModalDescription' class='card-text text-color-dim mb-2'></p>
+									</div>
+									<iframe id='webpage' src='about:blank' sandbox='allow-forms allow-modals allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation' frameborder='0' class='webpage-frame rounded'
+										style='width:100%; height: auto; border: 1px solid rgba(128, 128, 128, 0.4)'></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h4>GitHub Repositories</h4>
+					<p>The repositories below are automatically generated and represents a spectrum of my
+						work. Projects marked with an <i data-feather='eye' style='width:15px; height:15px;'></i>
+						icon have a live demo hosted on GitHub Pages that can be previewed from within this page.</p>
+					<ul id='github-projects' class='list-group'>
+						<!-- GitHub repos will be inserted here -->
+					</ul>
+
+					<br>
+					<button id='nintendoSectionExpander' class='expand-button text-color' type='button'
+						data-bs-toggle='collapse' data-bs-target='#nintendoSection' aria-expanded='false'
+						aria-controls='nintendoSection'>
+						<i data-feather='chevron-down' class='expand-icon'></i>
+						<h5>Development of Applications on the Nintendo Switch and 3DS</h5>
+					</button>
+					<div id='nintendoSection' class='collapse'>
+						<p>Developing applications for Nintendo platforms using SmileBASIC, a variation of the BASIC
+							programming language tailored for the Nintendo 3DS and Switch, has been very rewarding. This
+							environment provides access to hardware components, such as button presses, touch input,
+							accelerometer data, and the GPU for matrix operations, as well as including a minimal
+							graphics library (rendering of lines, polygons, images, and ellipses). These tools
+							facilitate the creation of diverse projects that leverage the unique capabilities of the
+							system. Below are some selected projects that I developed on this platform.</p>
+
+						<div class='card mb-3 text-color rounded card-border'>
+							<div class='card-header bg-color-dim'>
+								<h5 class='card-title m-0'>Game Engine: <a
+										href='https://smilebasicsource.com/forum/thread/3d-parkour' target='_blank'
+										rel='noopener noreferrer' class='text-color-dim text-decoration-none'>3D
+										Parkour</a></h5>
+							</div>
+							<div class='card-body rounded-bottom bg-card-color'>
+
+								<p class='card-text' style='height: 145px; overflow-y: auto;'>
+									Developed a custom 3D engine with integrated physics, this parkour game
+									provides an interactive experience, allowing players to navigate a character through
+									various actions like jumping, sliding, and flying, while interacting with a range of
+									game
+									elements such as rotating blocks.spheres, zero-gravity zones, trampolines,
+									water, gravity inverters, world rotators, and camera style modifiers. The game
+									features
+									local multiplayer capabilities, an integrated chat system, an intricate level
+									editor, and a user interface for environmental adjustments, and many levels. It
+									includes a Japanese translation to accommodate international audiences. Since its
+									release, the game has risen to become one of the most popular games on the platform.
+								</p>
+								<div class='scroll-wrapper'>
+									<div class='horizontal-scroll-container'>
+										<img src='img/smilebasic/3d-parkour/1.jpg' alt='3D Parkour 1'>
+										<img src='img/smilebasic/3d-parkour/2.jpg' alt='3D Parkour 2'>
+										<img src='img/smilebasic/3d-parkour/3.jpg' alt='3D Parkour 3'>
+										<img src='img/smilebasic/3d-parkour/4.jpg' alt='3D Parkour 4'>
+										<img src='img/smilebasic/3d-parkour/5.jpg' alt='3D Parkour 5'>
+										<img src='img/smilebasic/3d-parkour/6.jpg' alt='3D Parkour 6'>
+										<img src='img/smilebasic/3d-parkour/7.jpg' alt='3D Parkour 8'>
+										<img src='img/smilebasic/3d-parkour/8.jpg' alt='3D Parkour 9'>
+										<img src='img/smilebasic/3d-parkour/9.jpg' alt='3D Parkour 9'>
+										<img src='img/smilebasic/3d-parkour/10.jpg' alt='3D Parkour 10'>
+										<img src='img/smilebasic/3d-parkour/11.jpg' alt='3D Parkour 11'>
+										<img src='img/smilebasic/3d-parkour/12.jpg' alt='3D Parkour 12'>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class='card mb-3 text-color rounded card-border'>
+							<div class='card-header bg-color-dim'>
+								<h5 class='card-title m-0'>Graphics Engine: <a
+										href='https://smilebasicsource.com/forum/thread/fractal-canvas' target='_blank'
+										rel='noopener noreferrer' class='text-color-dim text-decoration-none'>Fractal
+										Canvas</a></h5>
+							</div>
+							<div class='card-body rounded-bottom bg-card-color'>
+								<p class='card-text' style='height: 100px; overflow-y: auto;'>
+									Fractal Canvas is an intuitive application tailored for users to explore a diverse
+									range of fractals. It features a user interface that facilitates the customization
+									of fractal appearances. With an integrated rendering function, users can generate
+									high-resolution images of their tailored fractals.
+								</p>
+								<div class='scroll-wrapper'>
+									<div class='horizontal-scroll-container'>
+										<img src='img/smilebasic/fractal-canvas/1.jpg' alt='Fractal Canvas 1'>
+										<img src='img/smilebasic/fractal-canvas/2.jpg' alt='Fractal Canvas 2'>
+										<img src='img/smilebasic/fractal-canvas/3.jpg' alt='Fractal Canvas 3'>
+										<img src='img/smilebasic/fractal-canvas/4.jpg' alt='Fractal Canvas 4'>
+										<img src='img/smilebasic/fractal-canvas/5.jpg' alt='Fractal Canvas 5'>
+										<img src='img/smilebasic/fractal-canvas/6.jpg' alt='Fractal Canvas 6'>
+										<img src='img/smilebasic/fractal-canvas/7.jpg' alt='Fractal Canvas 7'>
+										<img src='img/smilebasic/fractal-canvas/8.jpg' alt='Fractal Canvas 8'>
+										<img src='img/smilebasic/fractal-canvas/9.jpg' alt='Fractal Canvas 9'>
+										<img src='img/smilebasic/fractal-canvas/10.jpg' alt='Fractal Canvas 10'>
+										<img src='img/smilebasic/fractal-canvas/11.jpg' alt='Fractal Canvas 11'>
+										<img src='img/smilebasic/fractal-canvas/12.jpg' alt='Fractal Canvas 12'>
+										<img src='img/smilebasic/fractal-canvas/13.jpg' alt='Fractal Canvas 13'>
+										<img src='img/smilebasic/fractal-canvas/14.jpg' alt='Fractal Canvas 14'>
+										<img src='img/smilebasic/fractal-canvas/15.jpg' alt='Fractal Canvas 15'>
+										<img src='img/smilebasic/fractal-canvas/16.jpg' alt='Fractal Canvas 16'>
+										<img src='img/smilebasic/fractal-canvas/17.jpg' alt='Fractal Canvas 17'>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class='card mb-3 text-color rounded card-border'>
+							<div class='card-header bg-color-dim'>
+								<h5 class='card-title m-0'>Graphics Library: <a
+										href='https://smilebasicsource.com/forum/thread/sim3d' target='_blank'
+										rel='noopener noreferrer' class='text-color-dim text-decoration-none'>SIM.3D</a>
+								</h5>
+							</div>
+							<div class='card-body rounded-bottom bg-card-color'>
+								<p class='card-text' style='height: 100px; overflow-y: auto;'>
+									This graphics library was specifically designed to harness the potential of GPU
+									vector operations for rendering 3D graphics. The versatility of this engine has
+									enabled the development of various games, delivering remarkable visual experiences
+									that are both efficient and impactful.
+								</p>
+								<div class='scroll-wrapper'>
+									<div class='horizontal-scroll-container'>
+										<img src='img/smilebasic/sim-3d/1.jpg' alt='SIM.3D 1'>
+										<img src='img/smilebasic/sim-3d/2.jpg' alt='SIM.3D 2'>
+										<img src='img/smilebasic/sim-3d/3.jpg' alt='SIM.3D 3'>
+										<img src='img/smilebasic/sim-3d/4.jpg' alt='SIM.3D 4'>
+										<img src='img/smilebasic/sim-3d/5.jpg' alt='SIM.3D 5'>
+										<img src='img/smilebasic/sim-3d/6.jpg' alt='SIM.3D 6'>
+										<img src='img/smilebasic/sim-3d/7.jpg' alt='SIM.3D 7'>
+										<img src='img/smilebasic/sim-3d/8.jpg' alt='SIM.3D 8'>
+										<img src='img/smilebasic/sim-3d/9.jpg' alt='SIM.3D 9'>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class='container-fluid p-0'>
+							<div class='row'>
+								<div class='col-md-6'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'><a
+													href='https://smilebasicsource.com/forum/thread/linear-algebra-toolkit'
+													target='_blank' rel='noopener noreferrer'
+													class='text-color-dim text-decoration-none'>Linear
+													Algebra Toolkit</a>
+											</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'>
+											<p class='card-text' style='height: 100px; overflow-y: auto;'>
+												An application designed for matrix operations across various dimensions.
+												It allows users to compute matrix inverses, determinants, and achieve
+												row echelon form. Additionally, it provides a detailed step-by-step
+												breakdown for each operation, showcasing the progression of the
+												computations.
+											</p>
+											<div class='scroll-wrapper'>
+												<div class='horizontal-scroll-container'>
+													<img src='img/smilebasic/linear-algebra-toolkit/1.jpg'
+														alt='Linear Algebra Toolkit 1'>
+													<img src='img/smilebasic/linear-algebra-toolkit/2.jpg'
+														alt='Linear Algebra Toolkit 2'>
+													<img src='img/smilebasic/linear-algebra-toolkit/3.jpg'
+														alt='Linear Algebra Toolkit 3'>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-6'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'><a
+													href='https://smilebasicsource.com/forum/thread/tower-of-hanoi'
+													target='_blank' rel='noopener noreferrer'
+													class='text-color-dim text-decoration-none'>Tower
+													of Hanoi Game</a>
+											</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'>
+											<p class='card-text' style='height: 100px; overflow-y: auto;'>
+												A game that challenges players to solve the Tower of Hanoi puzzle.
+												It features a user interface that facilitates the customization of the
+												number of disks with a timer and a move counter.
+											</p>
+											<div class='scroll-wrapper'>
+												<div class='horizontal-scroll-container'>
+													<img src='img/smilebasic/tower-of-hanoi/1.jpg'
+														alt='Tower of Hanoi 1'>
+													<img src='img/smilebasic/tower-of-hanoi/2.jpg'
+														alt='Tower of Hanoi 2'>
+													<img src='img/smilebasic/tower-of-hanoi/3.jpg'
+														alt='Tower of Hanoi 3'>
+													<img src='img/smilebasic/tower-of-hanoi/4.jpg'
+														alt='Tower of Hanoi 4'>
+													<img src='img/smilebasic/tower-of-hanoi/5.jpg'
+														alt='Tower of Hanoi 5'>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-4'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'><a
+													href='https://smilebasicsource.com/forum/thread/smilebasic-obfuscator'
+													target='_blank' rel='noopener noreferrer'
+													class='text-color-dim text-decoration-none'>Code
+													Obfuscator for BASIC</a></h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'>
+											<p class='card-text' style='height: 100px; overflow-y: auto;'>
+												An application that obfuscates BASIC code, intentionally making it
+												difficult to read and understand. It features an interface that allows
+												users to customize the level of obfuscation, such as renaming variables
+												and functions, removing comments, reorganizing code, etc.
+											</p>
+											<div class='scroll-wrapper'>
+												<div class='horizontal-scroll-container'>
+													<img src='img/smilebasic/obfuscator/1.png' alt='Obfuscator 1'>
+													<img src='img/smilebasic/obfuscator/2.jpg' alt='Obfuscator 2'>
+													<img src='img/smilebasic/obfuscator/3.jpg' alt='Obfuscator 3'>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-4'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'><a
+													href='https://smilebasicsource.com/forum/thread/sha-256-hash-function'
+													target='_blank' rel='noopener noreferrer'
+													class='text-color-dim text-decoration-none'>Raycasting Engine</a>
+											</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'>
+											<p class='card-text' style='height: 100px; overflow-y: auto;'>
+												An application that renders a 3D map using raycasting techniques,
+												allowing for exploration, jumping, and modifying the world.
+											</p>
+											<div class='scroll-wrapper'>
+												<div class='horizontal-scroll-container'>
+													<img src='img/smilebasic/raycast/1.jpg' alt='Raycasting Engine 1'>
+													<img src='img/smilebasic/raycast/2.jpg' alt='Raycasting Engine 2'>
+													<img src='img/smilebasic/raycast/3.jpg' alt='Raycasting Engine 3'>
+													<img src='img/smilebasic/raycast/4.jpg' alt='Raycasting Engine 4'>
+													<img src='img/smilebasic/raycast/5.jpg' alt='Raycasting Engine 5'>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-4'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'><a
+													href='https://smilebasicsource.com/forum/thread/sha-256-hash-function'
+													target='_blank' rel='noopener noreferrer'
+													class='text-color-dim text-decoration-none'>SHA-256
+													on Nintendo</a>
+											</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'>
+											<p class='card-text' style='height: 100px; overflow-y: auto;'>
+												An application that computes SHA-256 hashes that can be used for Bitcoin
+												mining. It features a user interface that allows users to customize the
+												input string and the number of hashes to compute.
+											</p>
+											<div class='scroll-wrapper'>
+												<div class='horizontal-scroll-container'>
+													<img src='img/smilebasic/sha-256/1.jpg' alt='SHA-256 1'>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr class='border-bottom-dim'>
+
+					<button id='additionalonExpander' class='expand-button text-color' type='button'
+						data-bs-toggle='collapse' data-bs-target='#openSourceSection' aria-expanded='false'
+						aria-controls='openSourceSection'>
+						<i data-feather='chevron-down' class='expand-icon'></i>
+						<h5>Contributions to Open Source Projects</h5>
+					</button>
+					<div id='openSourceSection' class='collapse'>
+						<p>Participating in open-source projects has provided me the opportunity to collaborate with
+							diverse teams, enhance software transparency, and explore contemporary technological
+							solutions. I've engaged with multiple significant projects in the open-source domain. Below
+							are some notable contributions.</p>
+
+						<div class='card mb-3 text-color rounded card-border'>
+							<div class='card-header bg-color-dim'>
+								<h5 class='card-title m-0'>Bitcoin Core: Primary Bitcoin Protocol Implementation &
+									Enhanced Logging</h5>
+							</div>
+							<div class='card-body rounded-bottom bg-card-color'>
+								<p class='card-text'>
+									Within the Bitcoin Core project:
+								<ul>
+									<li>Improved logging capabilities with a specific emphasis on P2P networking nodes.
+									</li>
+									<li>Identified and addressed protocol design vulnerabilities to enhance network
+										security.</li>
+								</ul>
+								</p>
+								<p class='card-text'>
+									In a separate project enhancing Bitcoin Core's extensibility:
+								<ul>
+									<li>Developed real-time logging for peer connections across various networks,
+										enabling enhanced monitoring capabilities.</li>
+									<li>Made the setup process user-friendly with easy-to-use scripts, increasing
+										accessibility.</li>
+									<li>Created an optimized network logging application, focusing on efficient data
+										storage and transfer.</li>
+									<li>Added specialized RPC commands for more detailed and precise system
+										interactions.</li>
+									<li>Implemented the <i>minconnections</i> parameter, offering users greater control
+										over peer connections.</li>
+								</ul>
+								</p>
+							</div>
+						</div>
+
+						<div class='card mb-3 text-color rounded card-border'>
+							<div class='card-header bg-color-dim'>
+								<h5 class='card-title m-0'>Version++: Augmenting Bitcoin Peer Handshake Authentication
+								</h5>
+							</div>
+							<div class='card-body rounded-bottom bg-card-color'>
+								<p>Version++ introduces an additional layer to the handshake protocol among Bitcoin
+									peers. This enhancement seeks to increase the reliability of initial interactions
+									within the Bitcoin network.</p>
+								<div class='scroll-wrapper'>
+									<div class='horizontal-scroll-container'>
+										<img src='img/version++/1.png' alt='Version++ 1'>
+										<img src='img/version++/2.png' alt='Version++ 2'>
+										<img src='img/version++/3.png' alt='Version++ 3'>
+									</div>
+								</div>
+								<p>This work was presented at CCNC 2023.
+									<a href='https://doi.org/10.1109/CCNC51644.2023.10059985' target='_blank'
+										rel='noopener noreferrer'>Main
+										Publication</a>,
+									<a href='https://doi.org/10.1109/CCNC51644.2023.10059971' target='_blank'
+										rel='noopener noreferrer'>Demo
+										Publication</a>
+								</p>
+							</div>
+						</div>
+
+						<div class='container-fluid p-0'>
+							<div class='row'>
+								<div class='col-md-4'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'>Ethereum and the Ethereum Virtual Machine (EVM)
+											</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'
+											style='height: 250px; overflow-y: auto;'>
+											<p>Ethereum is a decentralized platform that supports smart contracts. The
+												Ethereum Virtual Machine (EVM) is pivotal in executing these contracts
+												consistently across all network nodes. To operate a full node, the
+												complete blockchain and all smart contracts must be processed.</p>
+											<p>My work offers deeper insights into the EVM's opcode executions,
+												revealing metrics related to processing time, memory utilization, and
+												contract-specific data.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class='col-md-4'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'>CTFd: Enhancing Synchronization
+											</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'
+											style='height: 250px; overflow-y: auto;'>
+											<p>CTFd is a platform tailored for hosting Capture the Flag (CTF) events. It
+												is vital for organizing and scoring cybersecurity competitions.</p>
+											<p>I contributed plugins that refine event synchronization, providing
+												real-time score updates. Additionally, a post-event team-building
+												feature was added to promote diverse skill grouping, aiding
+												collaboration.</p>
+										</div>
+									</div>
+								</div>
+
+
+								<div class='col-md-4'>
+									<div class='card mb-3 text-color rounded card-border'>
+										<div class='card-header bg-color-dim'>
+											<h5 class='card-title m-0'>PowerTOP: Power Monitoring and Bug Fixes</h5>
+										</div>
+										<div class='card-body rounded-bottom bg-card-color'
+											style='height: 250px; overflow-y: auto;'>
+											<p>Measuring power consumption in computers is often indirect and imprecise.
+												PowerTOP is among the few tools offering more detailed power monitoring
+												without dedicated hardware.</p>
+											<p>I addressed a critical issue in PowerTOP that caused a malfunction in
+												Ryzen processors, leading to its resolution in the tool's official
+												release.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+	</div>
+	<footer class='container-main footer text-color-dim bg-color-dim'>
+		<div class='row'>
+			<div class='col text-center'>
+				Copyright © 2023 Ariful Rabbani.
+			</div>
+		</div>
+	</footer>
+	<script src='lib/js/bootstrap.bundle.min.js' defer></script>
+	<script src='lib/js/feather.min.js'></script>
+	<script type='text/javascript' src='script.min.js'></script>
+
+	<script type='text/javascript'>
+		// Sanitize some HTML string to prevent cross-site scripting attacks
+		function sanitizeHTML(str) {
+			var div = document.createElement('div');
+			div.textContent = str;
+			return div.innerHTML;
+		}
+
+		let repoDescriptions = {};
+
+		// Generate the list of GitHub repositories and render them on the page
+		async function fetchGitHubRepos(username) {
+			const userRepoApiUrl = `https://api.github.com/users/${username}/repos?page=1&per_page=100`;
+			const userOrgsApiUrl = `https://api.github.com/users/${username}/orgs`;
+			const skipZeroStarRepos = true;
+			let allRepos = [];
+			repoDescriptions = {};
+			try {
+				const cachedRepos = localStorage.getItem('githubRepos');
+				const cachedTimestamp = localStorage.getItem('githubReposTimestamp');
+				const oneDay = 24 * 60 * 60 * 1000; // milliseconds
+				const isCacheValid = cachedRepos && cachedTimestamp && (new Date() - new Date(cachedTimestamp) < oneDay);
+
+				if (isCacheValid) {
+					// Use cached data
+					allRepos = JSON.parse(cachedRepos);
+				} else {
+					// Fetch user's personal repositories
+					const response = await fetch(userRepoApiUrl);
+					if (!response.ok) throw new Error(`GitHub API returned status ${response.status}`);
+					allRepos = await response.json();
+					// Fetch organizations the user is a part of
+					const orgsResponse = await fetch(userOrgsApiUrl);
+					if (!orgsResponse.ok) throw new Error(`GitHub API returned status ${orgsResponse.status}`);
+					const orgs = await orgsResponse.json();
+					// For each organization, fetch the repositories
+					if (!orgs.includes('peer-connectivity-estimator')) orgs.push({ login: 'peer-connectivity-estimator' });
+					for (let org of orgs) {
+						const orgReposResponse = await fetch(`https://api.github.com/orgs/${org.login}/repos`);
+						if (!orgReposResponse.ok) throw new Error(`GitHub API returned status ${orgReposResponse.status}`);
+						const orgRepos = await orgReposResponse.json();
+						allRepos = allRepos.concat(orgRepos);
+					}
+					// Store data and timestamp in localStorage
+					localStorage.setItem('githubRepos', JSON.stringify(allRepos));
+					localStorage.setItem('githubReposTimestamp', new Date().toISOString());
+				}
+				// Sorting and rendering logic
+				allRepos.sort((a, b) =>
+					//(b.has_pages - a.has_pages) ||
+					(b.stargazers_count - a.stargazers_count) ||
+					(b.forks_count - a.forks_count)
+				);
+				const repoList = document.getElementById('github-projects');
+				for (let repo of allRepos) {
+					if (skipZeroStarRepos && repo.stargazers_count === 0) continue;
+					let repoFullName = (repo.owner.type === 'Organization') ? `${repo.owner.login}/${repo.name}` : repo.name;
+					let repoUrl = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
+					let repoUrlSourceCode = repo.html_url;
+					let createdAt = new Date(repo.created_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+					let updatedAt = new Date(repo.updated_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+					let icon = repo.has_pages ? `<i data-feather="eye" class="text-color-dim repo-icon repo-icon-hover" onclick="showWebpage('${repoUrl}', '${repoUrlSourceCode}', '${repoFullName}')"></i>` : `<i data-feather="minus" class="text-color-dim repo-icon"></i>`;
+					let description = repo.description ? repo.description : '';
+					if (repo.description) repoDescriptions[repoUrlSourceCode] = repo.description;
+
+					let badgeContent = [];
+					if (repo.stargazers_count === 1) badgeContent.push('1 star');
+					else if (repo.stargazers_count > 1) badgeContent.push(`${repo.stargazers_count} stars`);
+					if (repo.forks_count === 1) badgeContent.push('1 fork');
+					else if (repo.forks_count > 1) badgeContent.push(`${repo.forks_count} forks`);
+					if (repo.watchers_count === 1) badgeContent.push('1 watcher');
+					else if (repo.watchers_count > 1) badgeContent.push(`${repo.watchers_count} watchers`);
+
+					let starBadge = badgeContent.length ? `<span class='badge badge-right badge-secondary border bg-color text-color-dim'>${badgeContent.join(', ')}</span>` : '';
+
+					// let size = repo.size; 
+					// let unit = 'kilobyte';
+					// if (size >= 1e6) {
+					//	 size = size / 1e6;
+					//	 unit = 'gigabyte';
+					// } else if (size >= 1e3) {
+					//	 size = size / 1e3;
+					//	 unit = 'megabyte';
+					// }
+					// if (size != 1) unit += 's';
+					// size = Number(size.toPrecision(4));
+
+					let sanitizedDescription = sanitizeHTML(repo.description || '');
+					repoFullNameReplaceUnderscore = repoFullName
+						.replace(/ plus plus/gi, '++')
+						.replace(/[_-]/g, ' ')
+						.replace(/\//g, ' / ')
+						.replace(/aes/gi, 'AES')
+						.replace(/anti /gi, 'anti-')
+						.replace(/cpp/gi, 'C++')
+						.replace(/des/gi, 'DES')
+						.replace(/pdf/gi, 'PDF')
+						.replace(/tcp udp/gi, 'TCP & UDP')
+						.replace(/ui/gi, 'UI')
+						.replace(/ux/gi, 'UX')
+						.replace(/\.sol/gi, '.SOL')
+						.replace(/my linux/gi, 'custom linux')
+					//let repoItem = `<li class='list-group-item bg-color-dim text-color fade show'>${icon} <a href='${repoUrl}' target='_blank' rel='noopener noreferrer' class='text-color-dim text-decoration-none text-capitalize fs-5' rel='noopener noreferrer' class='text-color'><strong>${repoFullNameReplaceUnderscore}</strong></a> ${starBadge}<br>${createdAt} - ${updatedAt}, ${size} ${unit}. ${sanitizedDescription}<br></li>`;
+					let repoItem = `<li class='list-group-item bg-color-dim text-color fade show'>${icon} <a href='${repoUrl}' target='_blank' rel='noopener noreferrer' class='text-color-dim text-decoration-none text-capitalize fs-5' rel='noopener noreferrer' class='text-color'><strong>${repoFullNameReplaceUnderscore}</strong></a> ${starBadge}<br>${createdAt} - ${updatedAt}. ${sanitizedDescription}<br></li>`;
+					repoList.innerHTML += repoItem;
+				}
+				// Update the icons on the page
+				feather.replace({
+					'aria-hidden': 'true'
+				});
+				document.querySelectorAll('.repo-icon').forEach(icon => { icon.setAttribute('width', '25'); icon.setAttribute('height', '25'); });
+				// Optionally, show the other subsections on the page
+				// document.getElementById('nintendoSectionExpander').hidden = false;
+				// document.getElementById('additionalonExpander').hidden = false;
+			} catch (error) {
+				const repoList = document.getElementById('github-projects');
+				repoList.innerHTML += `<li class='list-group-item bg-color-dim text-color fade show'>Error fetching repositories: ${error.message}</li>`;
+			}
+		}
+
+		// Show a modal with an embedded webpage to preview the project in action
+		function showWebpage(url, urlSourceCode, repoName) {
+			const modalIframe = document.querySelector('#webpageModal .webpage-frame');
+			const modalTitle = document.querySelector('#webpageModalTitle');
+			const modalTitleSourceCode = document.querySelector('#webpageModalTitleSourceCode');
+			const description = repoDescriptions[urlSourceCode] || '';
+			if (description != '') {
+				document.getElementById('webpageModalDescriptionWrapper').style.display = 'block';
+				document.getElementById('webpageModalDescription').innerText = description;
+			} else {
+				document.getElementById('webpageModalDescriptionWrapper').style.display = 'none';
+				document.getElementById('webpageModalDescription').innerText = '';
+			}
+			modalIframe.src = url;
+			modalTitle.textContent = repoName;
+			modalTitle.href = url;
+			modalTitleSourceCode.href = urlSourceCode;
+			const modal = new bootstrap.Modal(document.getElementById('webpageModal'));
+
+			let modalHeight = document.getElementById('webpageModal').offsetHeight;
+			document.getElementById('webpage').style.height = (window.innerHeight - modalHeight) - 185 + 'px';
+			modalIframe.style.opacity = '0';
+			modal.show();
+			
+			modalIframe.onload = function() {
+				modalIframe.style.transition = 'opacity 0.5s';
+				modalIframe.style.opacity = 1;
+			};
+		}
+
+		// Animate the expand/collapse buttons
+		document.querySelectorAll('.expand-button').forEach(function (button) {
+			button.addEventListener('click', function () {
+				var icon = this.querySelector('.expand-icon');
+				icon.classList.toggle('icon-flipped');
+			});
+		});
+
+		// Initialize the page including the horizontal scroll containers and fetching the GitHub repos
+		document.addEventListener('DOMContentLoaded', function () {
+			setTimeout(function () {
+				const containers = document.querySelectorAll('.horizontal-scroll-container');
+				containers.forEach(function (container) {
+					let totalWidth = 0;
+					const images = container.querySelectorAll('img');
+					images.forEach(function (img) {
+						const style = window.getComputedStyle(img);
+						const marginLeft = parseFloat(style.marginLeft);
+						const marginRight = parseFloat(style.marginRight);
+						totalWidth += img.clientWidth + marginLeft + marginRight;
+					});
+					container.style.width = totalWidth + 'px';
+				});
+			}, 1000);
+			fetchGitHubRepos('arirab');
+		});
+	</script>
+</body>
+
+</html>
