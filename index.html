@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name='description' content='Portfolio for Ariful'>
+	<meta name='author' content='Ariful Rabbani'>
+	<title>Home - Ariful</title>
+	<link rel='icon' href='favicon.svg'>
+	<link href='lib/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='style.min.css' type='text/css' rel='stylesheet'>
+</head>
+
+<body class='bg-color'>
+	<header class='container-main navbar navbar-expand-md navbar-light bg-color sticky-top border-bottom-dim'>
+		<div class='container'>
+			<a class='navbar-brand text-center fs-5 col-md-2 border-0 bg-transparent text-color-bold'>Ariful Rabbani</a>
+			<button class='navbar-toggler text-color' type='button' data-bs-toggle='collapse'
+				data-bs-target='#navbarContent' aria-controls='navbarContent' aria-expanded='false'
+				aria-label='Toggle navigation'>
+				<span class='navbar-toggler-icon' data-feather='menu'></span>
+			</button>
+			<div class='collapse navbar-collapse' id='navbarContent'>
+				<ul class='navbar-nav me-auto'>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold'
+							href='/'><b>Home</b></a>
+					</li>
+					<li class='nav-item ms-3'><a class='nav-link nav-link-uline fs-6 text-color-bold'
+							href='projects'>Projects</a></li>
+					<li class='nav-item dropdown ms-3'>
+						<a class='nav-link dropdown-toggle nav-link-uline fs-6 text-color-bold' href='#' role='button'
+							data-bs-toggle='dropdown' aria-expanded='false'>
+							Contact
+						</a>
+						<div id='portfolioDropdown' class='dropdown-menu p-0 bg-color'
+							aria-labelledby='portfolioDropdown'>
+							<a class='dropdown-item text-color custom-dropdown-item' href='resume'>Resume</a>
+							<a class='dropdown-item text-color custom-dropdown-item' id='contactNav' href='contact'>Contact</a>
+						</div>
+					</li>
+				</ul>
+				<div class='form-check form-switch float-end'>
+					<label class='form-check-label text-color' for='nightModeToggle'>
+						<i id='dayNightIcon' data-feather='sun'></i>
+					</label>
+					<input class='form-check-input' type='checkbox' id='nightModeToggle'
+						onchange='toggleDayNightIcon()'>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class='container-main d-flex flex-wrap bg-color fade'>
+		<nav class='navbar col-md-3 col-lg-3 d-md-block bg-color sidebar'>
+			<div class='position-sticky pt-3 sidebar-sticky'>
+				<ul class='nav flex-column'>
+					<li class='nav-item'>
+						<canvas id='profile' class='fade' width='600' height='600'></canvas>
+					</li>
+					<li class='nav-link nav-item mt-3'><span
+							class='active fs-5 font-weight-bold text-color-bold'><b>Ariful Rabbani</b></span>
+					</li>
+					<li class='nav-item'><span class='nav-link active fs-6 text-color'>Ph.D. Student</span><span class='nav-link fs-6 text-color-dim'
+							style='padding-top: 0; margin-top: -5px;'>Department of Computer Science, University of
+							Colorado, Colorado Springs</span></li>
+					<li class='nav-item'><a class='nav-link fs-6 text-color' href='mailto:krabbani@uccs.edu'
+							target='_blank' rel='noopener noreferrer'><span data-feather='mail'
+								class='align-text-bottom text-color-dim'></span>
+							Email</a></li>
+					<li class='nav-item'><a class='nav-link fs-6 text-color' href='https://github.com/arirab'
+							target='_blank' rel='noopener noreferrer'><span data-feather='github'
+								class='align-text-bottom text-color-dim'></span>
+							GitHub</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main class='col-md-9 ms-sm-auto col-lg-9 p-3 px-md-4 bg-color'>
+			<h4 class='text-color'>Welcome</h4>
+			<p class='text-color'>
+				I am Ariful Rabbani, a Ph.D. student in the Department of Computer Science at the University of Colorado, Colorado Springs. My academic journey is driven by a commitment to advancing technology through focused research and innovative thinking.
+			</p>
+			<hr class='text-color'>
+			<p class='fs-6 text-color'>
+				As I begin my doctoral studies, I am eager to explore various research areas within computer science. Although I have not yet defined my specific research focus, my dedication to inquiry and learning will guide me in identifying areas where I can make meaningful contributions.
+			</p>
+		
+			<h4 class='text-color'>Research Ambitions</h4>
+			<p class='text-color'>
+				I view research as a process of deep inquiry and intellectual challenge. My goal is to contribute to computer science by tackling complex problems and developing solutions with practical and theoretical significance. This page will evolve to reflect the direction of my research as it progresses.
+			</p>
+		
+			<h4 class='text-color'>Future Directions</h4>
+			<p class='text-color'>
+				My interests encompass emerging fields such as artificial intelligence, machine learning, and data security. I am particularly focused on how these technologies can be applied to address real-world challenges. I look forward to sharing my progress and findings as my research evolves.
+			</p>
+		
+			<p class='text-color'>
+				More details about my ongoing work will be available on my <a href='projects'>projects</a> page as my research develops.
+			</p>
+		</main>
+		
+		
+	</div>
+	<footer class='container-main footer text-color-dim bg-color-dim'>
+		<div class='row'>
+			<div class='col text-center'>
+				Copyright © 2023 Ariful Rabbani.
+			</div>
+		</div>
+	</footer>
+	<script src='lib/js/bootstrap.bundle.min.js' defer></script>
+	<script src='lib/js/feather.min.js'></script>
+	<script type='text/javascript' src='script.min.js'></script>
+	<script type='text/javascript'>
+		// Draw the profile image on the canvas if supported, otherwise insert the image element
+		window.onload = function () {
+			let canvas = document.getElementById('profile');
+			if (canvas.getContext) {
+				var ctx = canvas.getContext('2d');
+				var img = new Image();
+				img.onload = function () {
+					ctx.drawImage(img, 0, 0, 600, 600);
+					canvas.classList.add('show');
+				}
+				img.src = 'img/profile.jpg';
+			} else {
+				// Canvas is not supported, insert the image
+				var imgElement = document.createElement('img');
+				imgElement.id = 'profileImgFallback';
+				imgElement.src = 'img/profile.jpg';
+				imgElement.alt = 'Profile image of Ariful Rabbani';
+				imgElement.classList.add('fade');
+				canvas.parentNode.replaceChild(imgElement, canvas);
+				imgElement.onload = function () {
+					imgElement.classList.add('show');
+				}
+			}
+		};
+	</script>
+</body>
+
+</html>
